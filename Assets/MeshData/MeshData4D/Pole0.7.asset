@@ -1,0 +1,361 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240da3ac510d8bb4c819a47c8ce8e44b, type: 3}
+  m_Name: Pole0.7
+  m_EditorClassIdentifier: 
+  Vertices:
+  - {x: 0.7, y: 0.7, z: 2, w: 0.7}
+  - {x: 0.7, y: 0.7, z: 2, w: -0.7}
+  - {x: 0.7, y: 0.7, z: -2, w: 0.7}
+  - {x: 0.7, y: 0.7, z: -2, w: -0.7}
+  - {x: 0.7, y: -0.7, z: 2, w: 0.7}
+  - {x: 0.7, y: -0.7, z: 2, w: -0.7}
+  - {x: 0.7, y: -0.7, z: -2, w: 0.7}
+  - {x: 0.7, y: -0.7, z: -2, w: -0.7}
+  - {x: -0.7, y: 0.7, z: 2, w: 0.7}
+  - {x: -0.7, y: 0.7, z: 2, w: -0.7}
+  - {x: -0.7, y: 0.7, z: -2, w: 0.7}
+  - {x: -0.7, y: 0.7, z: -2, w: -0.7}
+  - {x: -0.7, y: -0.7, z: 2, w: 0.7}
+  - {x: -0.7, y: -0.7, z: 2, w: -0.7}
+  - {x: -0.7, y: -0.7, z: -2, w: 0.7}
+  - {x: -0.7, y: -0.7, z: -2, w: -0.7}
+  SurfaceFaces:
+  - FacetIdx:
+      V0: 0
+      V1: 2
+      V2: 4
+      V3: 8
+    FacetNormal: {x: -0, y: 0, z: -0, w: 1}
+    FacetCenter: {x: 0.34999996, y: 0.35, z: 1, w: 0.7}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 4
+      V3: 8
+    FacetNormal: {x: 0, y: -0, z: 1, w: -0}
+    FacetCenter: {x: 0.34999996, y: 0.35, z: 2, w: 0.35}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 2
+      V3: 8
+    FacetNormal: {x: -0, y: 1, z: -0, w: 0}
+    FacetCenter: {x: 0.34999996, y: 0.7, z: 1, w: 0.35}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 2
+      V3: 4
+    FacetNormal: {x: 1, y: -0, z: 0, w: -0}
+    FacetCenter: {x: 0.7, y: 0.34999996, z: 1, w: 0.35}
+  - FacetIdx:
+      V0: 2
+      V1: 4
+      V2: 7
+      V3: 6
+    FacetNormal: {x: 1, y: -0, z: 0, w: -0}
+    FacetCenter: {x: 0.7, y: -0.35, z: -1, w: 0.35}
+  - FacetIdx:
+      V0: 1
+      V1: 7
+      V2: 15
+      V3: 5
+    FacetNormal: {x: -0, y: 0, z: -0, w: -1}
+    FacetCenter: {x: 0.35, y: -0.35, z: 0, w: -0.7}
+  - FacetIdx:
+      V0: 1
+      V1: 5
+      V2: 8
+      V3: 9
+    FacetNormal: {x: 0, y: -0, z: 1, w: -0}
+    FacetCenter: {x: 0, y: 0.35, z: 2, w: -0.35}
+  - FacetIdx:
+      V0: 2
+      V1: 7
+      V2: 15
+      V3: 3
+    FacetNormal: {x: -0, y: 0, z: -1, w: 0}
+    FacetCenter: {x: 0.35, y: 0, z: -2, w: -0.35}
+  - FacetIdx:
+      V0: 1
+      V1: 2
+      V2: 7
+      V3: 3
+    FacetNormal: {x: 1, y: -0, z: 0, w: -0}
+    FacetCenter: {x: 0.7, y: 0.35, z: -1, w: -0.35}
+  - FacetIdx:
+      V0: 1
+      V1: 2
+      V2: 9
+      V3: 3
+    FacetNormal: {x: -0, y: 1, z: -0, w: 0}
+    FacetCenter: {x: 0.35, y: 0.7, z: 0, w: -0.35}
+  - FacetIdx:
+      V0: 1
+      V1: 2
+      V2: 4
+      V3: 7
+    FacetNormal: {x: 1, y: -0, z: 0, w: -0}
+    FacetCenter: {x: 0.7, y: 0, z: 0, w: 0}
+  - FacetIdx:
+      V0: 2
+      V1: 6
+      V2: 15
+      V3: 10
+    FacetNormal: {x: 0, y: -0, z: -1, w: -0}
+    FacetCenter: {x: 0, y: 0, z: -2, w: 0.35}
+  - FacetIdx:
+      V0: 2
+      V1: 6
+      V2: 8
+      V3: 10
+    FacetNormal: {x: -0, y: 0, z: -0, w: 1}
+    FacetCenter: {x: 0, y: 0.35, z: -1, w: 0.7}
+  - FacetIdx:
+      V0: 8
+      V1: 9
+      V2: 15
+      V3: 10
+    FacetNormal: {x: -1, y: -0, z: 0, w: -0}
+    FacetCenter: {x: -0.7, y: 0.35, z: 0, w: 0}
+  - FacetIdx:
+      V0: 2
+      V1: 8
+      V2: 9
+      V3: 10
+    FacetNormal: {x: -0, y: 1, z: -0, w: 0}
+    FacetCenter: {x: -0.35, y: 0.7, z: 0, w: 0.35}
+  - FacetIdx:
+      V0: 10
+      V1: 12
+      V2: 15
+      V3: 14
+    FacetNormal: {x: -1, y: 0, z: -0, w: 0}
+    FacetCenter: {x: -0.7, y: -0.35, z: -1, w: 0.35}
+  - FacetIdx:
+      V0: 6
+      V1: 12
+      V2: 15
+      V3: 14
+    FacetNormal: {x: 0, y: -1, z: 0, w: -0}
+    FacetCenter: {x: -0.35, y: -0.7, z: -1, w: 0.35}
+  - FacetIdx:
+      V0: 6
+      V1: 10
+      V2: 12
+      V3: 14
+    FacetNormal: {x: 0, y: -0, z: 0, w: 1}
+    FacetCenter: {x: -0.35, y: -0.35, z: -1, w: 0.7}
+  - FacetIdx:
+      V0: 6
+      V1: 10
+      V2: 15
+      V3: 14
+    FacetNormal: {x: -0, y: 0, z: -1, w: 0}
+    FacetCenter: {x: -0.35, y: -0.35, z: -2, w: 0.35}
+  - FacetIdx:
+      V0: 1
+      V1: 7
+      V2: 15
+      V3: 3
+    FacetNormal: {x: 0, y: -0, z: 0, w: -1}
+    FacetCenter: {x: 0.35, y: 0, z: -1, w: -0.7}
+  - FacetIdx:
+      V0: 6
+      V1: 8
+      V2: 10
+      V3: 12
+    FacetNormal: {x: -0, y: 0, z: -0, w: 1}
+    FacetCenter: {x: -0.35, y: 0, z: 0, w: 0.7}
+  - FacetIdx:
+      V0: 1
+      V1: 4
+      V2: 7
+      V3: 5
+    FacetNormal: {x: 1, y: 0, z: -0, w: 0}
+    FacetCenter: {x: 0.7, y: -0.35, z: 1, w: -0.35}
+  - FacetIdx:
+      V0: 2
+      V1: 7
+      V2: 15
+      V3: 6
+    FacetNormal: {x: 0, y: -0, z: -1, w: -0}
+    FacetCenter: {x: 0.35, y: -0.35, z: -2, w: 0}
+  - FacetIdx:
+      V0: 4
+      V1: 7
+      V2: 15
+      V3: 6
+    FacetNormal: {x: -0, y: -1, z: -0, w: 0}
+    FacetCenter: {x: 0.35, y: -0.7, z: -1, w: 0}
+  - FacetIdx:
+      V0: 2
+      V1: 4
+      V2: 8
+      V3: 6
+    FacetNormal: {x: -0, y: 0, z: -0, w: 1}
+    FacetCenter: {x: 0.35, y: 0, z: 0, w: 0.7}
+  - FacetIdx:
+      V0: 4
+      V1: 7
+      V2: 15
+      V3: 5
+    FacetNormal: {x: 0, y: -1, z: 0, w: -0}
+    FacetCenter: {x: 0.35, y: -0.7, z: 0, w: -0.35}
+  - FacetIdx:
+      V0: 1
+      V1: 4
+      V2: 8
+      V3: 5
+    FacetNormal: {x: 0, y: -0, z: 1, w: -0}
+    FacetCenter: {x: 0.35, y: 0, z: 2, w: 0}
+  - FacetIdx:
+      V0: 1
+      V1: 5
+      V2: 15
+      V3: 9
+    FacetNormal: {x: -0, y: 0, z: -0, w: -1}
+    FacetCenter: {x: 0, y: 0, z: 1, w: -0.7}
+  - FacetIdx:
+      V0: 1
+      V1: 2
+      V2: 8
+      V3: 9
+    FacetNormal: {x: -0, y: 1, z: -0, w: 0}
+    FacetCenter: {x: 0, y: 0.7, z: 1, w: 0}
+  - FacetIdx:
+      V0: 2
+      V1: 3
+      V2: 9
+      V3: 10
+    FacetNormal: {x: 0, y: 1, z: 0, w: -0}
+    FacetCenter: {x: 0, y: 0.7, z: -1, w: 0}
+  - FacetIdx:
+      V0: 1
+      V1: 9
+      V2: 15
+      V3: 3
+    FacetNormal: {x: -0, y: 0, z: -0, w: -1}
+    FacetCenter: {x: 0, y: 0.35, z: 0, w: -0.7}
+  - FacetIdx:
+      V0: 4
+      V1: 5
+      V2: 15
+      V3: 12
+    FacetNormal: {x: 0, y: -1, z: 0, w: -0}
+    FacetCenter: {x: 0, y: -0.7, z: 1, w: 0}
+  - FacetIdx:
+      V0: 2
+      V1: 3
+      V2: 15
+      V3: 10
+    FacetNormal: {x: -0, y: 0, z: -1, w: 0}
+    FacetCenter: {x: 0, y: 0.35, z: -2, w: 0}
+  - FacetIdx:
+      V0: 9
+      V1: 10
+      V2: 15
+      V3: 11
+    FacetNormal: {x: -1, y: 0, z: -0, w: 0}
+    FacetCenter: {x: -0.7, y: 0.35, z: -1, w: -0.35}
+  - FacetIdx:
+      V0: 3
+      V1: 10
+      V2: 15
+      V3: 11
+    FacetNormal: {x: 0, y: -0, z: -1, w: -0}
+    FacetCenter: {x: -0.35, y: 0.35, z: -2, w: -0.35}
+  - FacetIdx:
+      V0: 3
+      V1: 9
+      V2: 10
+      V3: 11
+    FacetNormal: {x: 0, y: 1, z: 0, w: -0}
+    FacetCenter: {x: -0.35, y: 0.7, z: -1, w: -0.35}
+  - FacetIdx:
+      V0: 3
+      V1: 9
+      V2: 15
+      V3: 11
+    FacetNormal: {x: -0, y: 0, z: -0, w: -1}
+    FacetCenter: {x: -0.35, y: 0.35, z: -1, w: -0.7}
+  - FacetIdx:
+      V0: 8
+      V1: 10
+      V2: 15
+      V3: 12
+    FacetNormal: {x: -1, y: -0, z: 0, w: -0}
+    FacetCenter: {x: -0.7, y: 0, z: 0, w: 0.35}
+  - FacetIdx:
+      V0: 4
+      V1: 5
+      V2: 8
+      V3: 12
+    FacetNormal: {x: -0, y: 0, z: 1, w: 0}
+    FacetCenter: {x: 0, y: -0.35, z: 2, w: 0.35}
+  - FacetIdx:
+      V0: 4
+      V1: 6
+      V2: 8
+      V3: 12
+    FacetNormal: {x: 0, y: -0, z: 0, w: 1}
+    FacetCenter: {x: 0, y: -0.35, z: 1, w: 0.7}
+  - FacetIdx:
+      V0: 4
+      V1: 6
+      V2: 15
+      V3: 12
+    FacetNormal: {x: -0, y: -1, z: -0, w: 0}
+    FacetCenter: {x: 0, y: -0.7, z: 0, w: 0.35}
+  - FacetIdx:
+      V0: 5
+      V1: 8
+      V2: 9
+      V3: 12
+    FacetNormal: {x: 0, y: -0, z: 1, w: -0}
+    FacetCenter: {x: -0.35, y: 0, z: 2, w: 0}
+  - FacetIdx:
+      V0: 9
+      V1: 12
+      V2: 15
+      V3: 13
+    FacetNormal: {x: -1, y: -0, z: 0, w: -0}
+    FacetCenter: {x: -0.7, y: -0.35, z: 1, w: -0.35}
+  - FacetIdx:
+      V0: 5
+      V1: 12
+      V2: 15
+      V3: 13
+    FacetNormal: {x: -0, y: -1, z: -0, w: 0}
+    FacetCenter: {x: -0.35, y: -0.7, z: 1, w: -0.35}
+  - FacetIdx:
+      V0: 5
+      V1: 9
+      V2: 12
+      V3: 13
+    FacetNormal: {x: -0, y: 0, z: 1, w: 0}
+    FacetCenter: {x: -0.35, y: -0.35, z: 2, w: -0.35}
+  - FacetIdx:
+      V0: 5
+      V1: 9
+      V2: 15
+      V3: 13
+    FacetNormal: {x: 0, y: -0, z: 0, w: -1}
+    FacetCenter: {x: -0.35, y: -0.35, z: 1, w: -0.7}
+  - FacetIdx:
+      V0: 8
+      V1: 9
+      V2: 15
+      V3: 12
+    FacetNormal: {x: -1, y: 0, z: -0, w: 0}
+    FacetCenter: {x: -0.7, y: 0, z: 1, w: 0}

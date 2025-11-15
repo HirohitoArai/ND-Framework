@@ -1,0 +1,312 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1701e09511c5a67479ab97bed655b09a, type: 3}
+  m_Name: Hollow Cube
+  m_EditorClassIdentifier: 
+  Vertices:
+  - {x: 0.7, y: 2.35, z: -1}
+  - {x: 0.7, y: 2.5833333, z: 1}
+  - {x: 0.7, y: 1.6499999, z: 1}
+  - {x: 0.7, y: 2.7, z: -1}
+  - {x: 0.7, y: 2.7, z: 1}
+  - {x: 0.5833333, y: 2.7, z: 1}
+  - {x: 0.35, y: 2.7, z: -1}
+  - {x: -0.35, y: 2.7, z: 1}
+  - {x: -0.7, y: 2.7, z: 1}
+  - {x: -0.7, y: 2.7, z: -1}
+  - {x: 0.7, y: 1.3, z: 1}
+  - {x: 0.7, y: 1.3, z: -1}
+  - {x: 0.5833333, y: 1.3, z: 1}
+  - {x: 0.34999996, y: 1.3, z: -1}
+  - {x: -0.35000002, y: 1.3, z: 1}
+  - {x: -0.7, y: 2.35, z: -1}
+  - {x: -0.7, y: 1.65, z: 1}
+  - {x: -0.7, y: 1.3, z: 1}
+  - {x: -0.7, y: 1.3, z: -1}
+  - {x: -0.7, y: 2.5833333, z: 1}
+  - {x: -1, y: 3, z: -1}
+  - {x: 0.7, y: 3, z: -1}
+  - {x: 1, y: 3, z: 1}
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 3, z: -1}
+  - {x: -1, y: 3, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: 0.70000005, y: 1, z: 1}
+  - {x: -1, y: 2.7, z: 1}
+  - {x: -1, y: 1.3, z: -1}
+  SurfaceFaces:
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 2
+    FacetNormal: {x: -1, y: 0, z: 0}
+    FacetCenter: {x: 0.6999999, y: 2.1944442, z: 0.3333333}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 3
+    FacetNormal: {x: -1, y: 0, z: 0}
+    FacetCenter: {x: 0.6999999, y: 2.5444443, z: -0.3333333}
+  - FacetIdx:
+      V0: 1
+      V1: 3
+      V2: 4
+    FacetNormal: {x: -1, y: 0, z: 0}
+    FacetCenter: {x: 0.6999999, y: 2.661111, z: 0.3333333}
+  - FacetIdx:
+      V0: 3
+      V1: 4
+      V2: 5
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: 0.66111106, y: 2.7, z: 0.3333333}
+  - FacetIdx:
+      V0: 3
+      V1: 5
+      V2: 6
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: 0.5444444, y: 2.7, z: -0.3333333}
+  - FacetIdx:
+      V0: 5
+      V1: 6
+      V2: 7
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: 0.1944444, y: 2.7, z: 0.3333333}
+  - FacetIdx:
+      V0: 6
+      V1: 7
+      V2: 8
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: -0.23333332, y: 2.7, z: 0.3333333}
+  - FacetIdx:
+      V0: 6
+      V1: 8
+      V2: 9
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: -0.34999996, y: 2.7, z: -0.3333333}
+  - FacetIdx:
+      V0: 0
+      V1: 2
+      V2: 10
+    FacetNormal: {x: -1, y: 0, z: 0}
+    FacetCenter: {x: 0.6999999, y: 1.7666667, z: 0.3333333}
+  - FacetIdx:
+      V0: 0
+      V1: 10
+      V2: 11
+    FacetNormal: {x: -1, y: 0, z: 0}
+    FacetCenter: {x: 0.6999999, y: 1.6499999, z: -0.3333333}
+  - FacetIdx:
+      V0: 10
+      V1: 11
+      V2: 12
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: 0.66111106, y: 1.2999998, z: 0.3333333}
+  - FacetIdx:
+      V0: 11
+      V1: 12
+      V2: 13
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: 0.5444444, y: 1.2999998, z: -0.3333333}
+  - FacetIdx:
+      V0: 12
+      V1: 13
+      V2: 14
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: 0.1944444, y: 1.2999998, z: 0.3333333}
+  - FacetIdx:
+      V0: 15
+      V1: 16
+      V2: 17
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: -0.6999999, y: 1.7666667, z: 0.3333333}
+  - FacetIdx:
+      V0: 15
+      V1: 17
+      V2: 18
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: -0.6999999, y: 1.6499999, z: -0.3333333}
+  - FacetIdx:
+      V0: 8
+      V1: 9
+      V2: 19
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: -0.6999999, y: 2.661111, z: 0.3333333}
+  - FacetIdx:
+      V0: 9
+      V1: 15
+      V2: 19
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: -0.6999999, y: 2.5444443, z: -0.3333333}
+  - FacetIdx:
+      V0: 15
+      V1: 16
+      V2: 19
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: -0.6999999, y: 2.1944442, z: 0.3333333}
+  - FacetIdx:
+      V0: 13
+      V1: 14
+      V2: 17
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: -0.23333332, y: 1.2999998, z: 0.3333333}
+  - FacetIdx:
+      V0: 13
+      V1: 17
+      V2: 18
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: -0.34999996, y: 1.2999998, z: -0.3333333}
+  - FacetIdx:
+      V0: 3
+      V1: 9
+      V2: 20
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: -0.3333333, y: 2.7999997, z: -0.99999994}
+  - FacetIdx:
+      V0: 3
+      V1: 20
+      V2: 21
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: 0.13333331, y: 2.8999999, z: -0.99999994}
+  - FacetIdx:
+      V0: 22
+      V1: 23
+      V2: 24
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: 0.99999994, y: 2.3333333, z: 0.3333333}
+  - FacetIdx:
+      V0: 22
+      V1: 24
+      V2: 25
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: 0.3333333, y: 2.9999998, z: 0.3333333}
+  - FacetIdx:
+      V0: 20
+      V1: 24
+      V2: 25
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: -0.3333333, y: 2.9999998, z: -0.3333333}
+  - FacetIdx:
+      V0: 23
+      V1: 24
+      V2: 26
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: 0.99999994, y: 1.6666665, z: -0.3333333}
+  - FacetIdx:
+      V0: 23
+      V1: 26
+      V2: 27
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: 0.3333333, y: 0.99999994, z: 0.3333333}
+  - FacetIdx:
+      V0: 11
+      V1: 21
+      V2: 24
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: 0.8, y: 2.4333332, z: -0.99999994}
+  - FacetIdx:
+      V0: 20
+      V1: 27
+      V2: 28
+    FacetNormal: {x: -1, y: 0, z: 0}
+    FacetCenter: {x: -0.99999994, y: 1.6666665, z: -0.3333333}
+  - FacetIdx:
+      V0: 20
+      V1: 25
+      V2: 27
+    FacetNormal: {x: -1, y: 0, z: 0}
+    FacetCenter: {x: -0.99999994, y: 2.3333333, z: 0.3333333}
+  - FacetIdx:
+      V0: 26
+      V1: 27
+      V2: 28
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: -0.3333333, y: 0.99999994, z: -0.3333333}
+  - FacetIdx:
+      V0: 11
+      V1: 24
+      V2: 26
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: 0.9, y: 1.7666667, z: -0.99999994}
+  - FacetIdx:
+      V0: 10
+      V1: 17
+      V2: 27
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: -0.3333333, y: 1.1999999, z: 0.99999994}
+  - FacetIdx:
+      V0: 10
+      V1: 27
+      V2: 29
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: 0.13333336, y: 1.0999999, z: 0.99999994}
+  - FacetIdx:
+      V0: 4
+      V1: 22
+      V2: 29
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: 0.8, y: 2.233333, z: 0.99999994}
+  - FacetIdx:
+      V0: 22
+      V1: 23
+      V2: 29
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: 0.9, y: 1.6666665, z: 0.99999994}
+  - FacetIdx:
+      V0: 8
+      V1: 17
+      V2: 27
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: -0.8, y: 1.6666665, z: 0.99999994}
+  - FacetIdx:
+      V0: 8
+      V1: 27
+      V2: 30
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: -0.9, y: 2.1333332, z: 0.99999994}
+  - FacetIdx:
+      V0: 4
+      V1: 22
+      V2: 30
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: 0.23333333, y: 2.7999997, z: 0.99999994}
+  - FacetIdx:
+      V0: 22
+      V1: 25
+      V2: 30
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: -0.3333333, y: 2.8999999, z: 0.99999994}
+  - FacetIdx:
+      V0: 9
+      V1: 18
+      V2: 20
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: -0.8, y: 2.3333333, z: -0.99999994}
+  - FacetIdx:
+      V0: 18
+      V1: 20
+      V2: 31
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: -0.9, y: 1.8666667, z: -0.99999994}
+  - FacetIdx:
+      V0: 11
+      V1: 26
+      V2: 31
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: 0.23333333, y: 1.1999999, z: -0.99999994}
+  - FacetIdx:
+      V0: 26
+      V1: 28
+      V2: 31
+    FacetNormal: {x: 0, y: 0, z: -1}
+    FacetCenter: {x: -0.3333333, y: 1.0999999, z: -0.99999994}

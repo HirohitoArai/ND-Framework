@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1701e09511c5a67479ab97bed655b09a, type: 3}
+  m_Name: Random
+  m_EditorClassIdentifier: Assembly-CSharp::MeshData3D
+  Vertices:
+  - {x: 1, y: -1, z: 1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}
+  - {x: 1, y: -1, z: -1}
+  - {x: 1, y: 1, z: 1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1.2, y: -0.8, z: 0.5}
+  - {x: -0.8, y: -1.2, z: -0.5}
+  - {x: -1.5, y: -0.5, z: -1.2}
+  - {x: 0.5, y: -1.5, z: 0.8}
+  - {x: 0.8, y: 1.5, z: -1}
+  - {x: -1.2, y: 0.5, z: 1.5}
+  - {x: -0.5, y: 1.2, z: -1.5}
+  - {x: 1.5, y: 0.8, z: 0.2}
+  SurfaceFaces:
+  - FacetIdx:
+      V0: 1
+      V1: 9
+      V2: 11
+    FacetNormal: {x: -0.30474067, y: -0.94855905, z: 0.08584248}
+    FacetCenter: {x: -0.43333328, y: -1.2333332, z: 0.43333328}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 13
+    FacetNormal: {x: -0, y: -0.31622776, z: 0.94868326}
+    FacetCenter: {x: -0.4, y: -0.49999997, z: 1.1666666}
+  - FacetIdx:
+      V0: 1
+      V1: 2
+      V2: 10
+    FacetNormal: {x: -0.70710677, y: -0.70710677, z: -0}
+    FacetCenter: {x: -1.1666666, y: -0.83333325, z: -0.4}
+  - FacetIdx:
+      V0: 0
+      V1: 8
+      V2: 15
+    FacetNormal: {x: 0.93730974, y: -0.11399708, z: 0.32932514}
+    FacetCenter: {x: 1.2333332, y: -0.33333328, z: 0.56666666}
+  - FacetIdx:
+      V0: 4
+      V1: 12
+      V2: 15
+    FacetNormal: {x: 0.5615314, y: 0.81422055, z: 0.147402}
+    FacetCenter: {x: 1.0999999, y: 1.0999999, z: 0.06666666}
+  - FacetIdx:
+      V0: 1
+      V1: 2
+      V2: 9
+    FacetNormal: {x: -0.7071069, y: -0.7071067, z: -0}
+    FacetCenter: {x: -0.9333333, y: -1.0666666, z: -0.16666666}
+  - FacetIdx:
+      V0: 6
+      V1: 10
+      V2: 13
+    FacetNormal: {x: -0.94811773, y: 0.317681, z: -0.012313236}
+    FacetCenter: {x: -1.2333332, y: 0.3333333, z: -0.23333333}
+  - FacetIdx:
+      V0: 6
+      V1: 10
+      V2: 14
+    FacetNormal: {x: -0.73063636, y: 0.32369968, z: -0.6011565}
+    FacetCenter: {x: -0.99999994, y: 0.56666666, z: -1.2333332}
+  - FacetIdx:
+      V0: 5
+      V1: 6
+      V2: 13
+    FacetNormal: {x: -0.92847663, y: 0.37139073, z: 0}
+    FacetCenter: {x: -1.0666666, y: 0.83333325, z: 0.49999997}
+  - FacetIdx:
+      V0: 5
+      V1: 6
+      V2: 14
+    FacetNormal: {x: -0.37139073, y: 0.92847663, z: -0}
+    FacetCenter: {x: -0.83333325, y: 1.0666666, z: -0.49999997}
+  - FacetIdx:
+      V0: 1
+      V1: 10
+      V2: 13
+    FacetNormal: {x: -0.96614826, y: -0.18778658, z: 0.17690037}
+    FacetCenter: {x: -1.2333332, y: -0.3333333, z: 0.43333328}
+  - FacetIdx:
+      V0: 4
+      V1: 5
+      V2: 12
+    FacetNormal: {x: 0, y: 0.97014254, z: 0.24253564}
+    FacetCenter: {x: 0.26666665, y: 1.1666666, z: 0.3333333}
+  - FacetIdx:
+      V0: 0
+      V1: 3
+      V2: 8
+    FacetNormal: {x: 0.7071067, y: -0.7071069, z: 0}
+    FacetCenter: {x: 1.0666666, y: -0.9333333, z: 0.16666666}
+  - FacetIdx:
+      V0: 3
+      V1: 10
+      V2: 14
+    FacetNormal: {x: 0.039193116, y: -0.19596544, z: -0.9798273}
+    FacetCenter: {x: -0.3333333, y: -0.09999998, z: -1.2333332}
+  - FacetIdx:
+      V0: 0
+      V1: 3
+      V2: 11
+    FacetNormal: {x: 0.70710677, y: -0.70710677, z: -0}
+    FacetCenter: {x: 0.83333325, y: -1.1666666, z: 0.26666665}
+  - FacetIdx:
+      V0: 0
+      V1: 4
+      V2: 13
+    FacetNormal: {x: 0.22162111, y: -0, z: 0.9751329}
+    FacetCenter: {x: 0.26666662, y: 0.16666666, z: 1.1666666}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 11
+    FacetNormal: {x: 0, y: -0.37139067, z: 0.92847675}
+    FacetCenter: {x: 0.16666666, y: -1.1666666, z: 0.9333333}
+  - FacetIdx:
+      V0: 3
+      V1: 9
+      V2: 11
+    FacetNormal: {x: 0.035516806, y: -0.96541065, z: -0.25830385}
+    FacetCenter: {x: 0.23333332, y: -1.2333332, z: -0.23333332}
+  - FacetIdx:
+      V0: 2
+      V1: 3
+      V2: 9
+    FacetNormal: {x: 0, y: -0.92847663, z: -0.37139073}
+    FacetCenter: {x: -0.26666665, y: -1.0666666, z: -0.83333325}
+  - FacetIdx:
+      V0: 4
+      V1: 5
+      V2: 13
+    FacetNormal: {x: 0, y: 0.70710677, z: 0.70710677}
+    FacetCenter: {x: -0.4, y: 0.83333325, z: 1.1666666}
+  - FacetIdx:
+      V0: 7
+      V1: 12
+      V2: 14
+    FacetNormal: {x: 0.3292325, y: 0.13169299, z: -0.9350203}
+    FacetCenter: {x: 0.43333328, y: 1.2333332, z: -1.1666666}
+  - FacetIdx:
+      V0: 7
+      V1: 12
+      V2: 15
+    FacetNormal: {x: 0.88302153, y: 0.3532086, z: -0.30905753}
+    FacetCenter: {x: 1.0999999, y: 1.0999999, z: -0.59999996}
+  - FacetIdx:
+      V0: 3
+      V1: 7
+      V2: 15
+    FacetNormal: {x: 0.9230769, y: 0, z: -0.38461536}
+    FacetCenter: {x: 1.1666666, y: 0.26666665, z: -0.59999996}
+  - FacetIdx:
+      V0: 3
+      V1: 7
+      V2: 14
+    FacetNormal: {x: 0.31622776, y: -0, z: -0.94868326}
+    FacetCenter: {x: 0.49999997, y: 0.4, z: -1.1666666}
+  - FacetIdx:
+      V0: 2
+      V1: 3
+      V2: 10
+    FacetNormal: {x: 0, y: -0.37139073, z: -0.92847663}
+    FacetCenter: {x: -0.49999997, y: -0.83333325, z: -1.0666666}
+  - FacetIdx:
+      V0: 0
+      V1: 4
+      V2: 15
+    FacetNormal: {x: 0.8479983, y: -0, z: 0.52999896}
+    FacetCenter: {x: 1.1666666, y: 0.26666665, z: 0.7333333}
+  - FacetIdx:
+      V0: 3
+      V1: 8
+      V2: 15
+    FacetNormal: {x: 0.97397673, y: -0.20192197, z: -0.102940656}
+    FacetCenter: {x: 1.2333332, y: -0.33333328, z: -0.1}
+  - FacetIdx:
+      V0: 5
+      V1: 12
+      V2: 14
+    FacetNormal: {x: -0.23588732, y: 0.97130084, z: 0.030526618}
+    FacetCenter: {x: -0.23333332, y: 1.2333332, z: -0.49999997}

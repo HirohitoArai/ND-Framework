@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1701e09511c5a67479ab97bed655b09a, type: 3}
+  m_Name: Cube
+  m_EditorClassIdentifier: Assembly-CSharp::MeshData3D
+  Vertices:
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1, y: -1, z: 1}
+  - {x: 1, y: -1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}
+  SurfaceFaces:
+  - FacetIdx:
+      V0: 0
+      V1: 4
+      V2: 6
+    FacetNormal: {x: 0, y: 0, z: 1}
+    FacetCenter: {x: -0.3333333, y: 0.3333333, z: 0.99999994}
+  - FacetIdx:
+      V0: 0
+      V1: 2
+      V2: 6
+    FacetNormal: {x: -0, y: 0, z: 1}
+    FacetCenter: {x: 0.3333333, y: -0.3333333, z: 0.99999994}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 2
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: 0.99999994, y: 0.3333333, z: 0.3333333}
+  - FacetIdx:
+      V0: 0
+      V1: 1
+      V2: 4
+    FacetNormal: {x: 0, y: 1, z: 0}
+    FacetCenter: {x: 0.3333333, y: 0.99999994, z: 0.3333333}
+  - FacetIdx:
+      V0: 1
+      V1: 4
+      V2: 5
+    FacetNormal: {x: -0, y: 1, z: -0}
+    FacetCenter: {x: -0.3333333, y: 0.99999994, z: -0.3333333}
+  - FacetIdx:
+      V0: 1
+      V1: 2
+      V2: 3
+    FacetNormal: {x: 1, y: 0, z: 0}
+    FacetCenter: {x: 0.99999994, y: -0.3333333, z: -0.3333333}
+  - FacetIdx:
+      V0: 3
+      V1: 5
+      V2: 7
+    FacetNormal: {x: -0, y: -0, z: -1}
+    FacetCenter: {x: -0.3333333, y: -0.3333333, z: -0.99999994}
+  - FacetIdx:
+      V0: 2
+      V1: 3
+      V2: 6
+    FacetNormal: {x: -0, y: -1, z: -0}
+    FacetCenter: {x: 0.3333333, y: -0.99999994, z: 0.3333333}
+  - FacetIdx:
+      V0: 1
+      V1: 3
+      V2: 5
+    FacetNormal: {x: -0, y: -0, z: -1}
+    FacetCenter: {x: 0.3333333, y: 0.3333333, z: -0.99999994}
+  - FacetIdx:
+      V0: 5
+      V1: 6
+      V2: 7
+    FacetNormal: {x: -1, y: -0, z: -0}
+    FacetCenter: {x: -0.99999994, y: -0.3333333, z: -0.3333333}
+  - FacetIdx:
+      V0: 4
+      V1: 5
+      V2: 6
+    FacetNormal: {x: -1, y: -0, z: -0}
+    FacetCenter: {x: -0.99999994, y: 0.3333333, z: 0.3333333}
+  - FacetIdx:
+      V0: 3
+      V1: 6
+      V2: 7
+    FacetNormal: {x: 0, y: -1, z: 0}
+    FacetCenter: {x: -0.3333333, y: -0.99999994, z: -0.3333333}
