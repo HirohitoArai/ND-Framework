@@ -42,8 +42,8 @@ public static class PlexParser
             if (data.Precision == PlexPrecision.Double)
             {
                 WriteVectorChunk(writer, "VERD", data.Vertices, data.Dimension, SIZE_DOUBLE);
-                WriteVectorChunk(writer, "NORMD", data.Facets.ConvertAll(f => f.Normal), data.Dimension, SIZE_DOUBLE);
-                WriteVectorChunk(writer, "CENTD", data.Facets.ConvertAll(f => f.Center), data.Dimension, SIZE_DOUBLE, true);
+                WriteVectorChunk(writer, "NRMD", data.Facets.ConvertAll(f => f.Normal), data.Dimension, SIZE_DOUBLE);
+                WriteVectorChunk(writer, "CNTD", data.Facets.ConvertAll(f => f.Center), data.Dimension, SIZE_DOUBLE, true);
             }
             else
             {
@@ -184,53 +184,88 @@ public static class PlexParser
     public static PlexData Read(string filePath)
     {
         var data = new PlexData();
-    
+        bool metaFound = false;
+
         using (var stream = File.Open(filePath, FileMode.Open))
         using (var reader = new BinaryReader(stream, Encoding.ASCII, false))
         {
-            //Global Header Validation
+            // Global Header Validation
             if (new string(reader.ReadChars(4)) != "PLEX") 
                 throw new Exception("Invalid PLEX file format.");
-        
+    
             ushort majorVersion = reader.ReadUInt16();
             if (majorVersion != 1) 
                 throw new Exception($"Unsupported PLEX version: {majorVersion}");
-        
+    
             reader.ReadUInt16(); // Skip Minor Version
 
-            //Continue reading chunks until end of file
             while (reader.BaseStream.Position < reader.BaseStream.Length)
             {
-                //Safely read the entire chunk, including the chunk header and CRC
-                if (reader.BaseStream.Length - reader.BaseStream.Position < 12) break; // If it is less than the header size, end
+                if (reader.BaseStream.Length - reader.BaseStream.Position < 12) break;
 
-                string chunkType = new string(reader.ReadChars(4));
+                string chunkType = new(reader.ReadChars(4));
                 ulong chunkLength = reader.ReadUInt64();
 
-                // Check if the data exceeds the file size
+                if (chunkType == "META")
+                {
+                    byte[] chunkData = reader.ReadBytes((int)chunkLength);
+                
+                    // Parse the META chunk in real time
+                    using (var ms = new MemoryStream(chunkData))
+                    using (var br = new BinaryReader(ms))
+                    {
+                        data.Dimension = br.ReadInt32();
+                        br.ReadInt32(); // Padding
+                        data.VertexCount = br.ReadUInt64();
+                        data.CreationTime = br.ReadUInt64();
+                        data.ModifiedTime = br.ReadUInt64();
+                        data.Precision = (br.ReadByte() == 1) ? PlexPrecision.Double : PlexPrecision.Single;
+                        br.ReadBytes(3); // Padding
+                        uint lSoftware = br.ReadUInt32();
+                        data.SoftwareName = Encoding.UTF8.GetString(br.ReadBytes((int)lSoftware));
+                    }
+                
+                    metaFound = true;
+                    break;
+                }
+                else
+                {
+                    reader.BaseStream.Seek((long)chunkLength + 4, SeekOrigin.Current);
+                }
+            }
+        }
+
+        if (!metaFound) throw new Exception("Required 'META' chunk not found.");
+        using (var stream = File.Open(filePath, FileMode.Open))
+        using (var reader = new BinaryReader(stream, Encoding.ASCII, false))
+        {
+            // skip Header
+            reader.ReadBytes(8);
+            while (reader.BaseStream.Position < reader.BaseStream.Length)
+            {
+                if (reader.BaseStream.Length - reader.BaseStream.Position < 12) break;
+
+                string chunkType = new(reader.ReadChars(4));
+                ulong chunkLength = reader.ReadUInt64();
+
                 if (reader.BaseStream.Length - reader.BaseStream.Position < (long)chunkLength + 4)
                     throw new Exception($"Incomplete chunk '{chunkType}' found.");
 
-                //Data loading and CRC verification
                 byte[] chunkData = reader.ReadBytes((int)chunkLength);
                 uint fileCrc = reader.ReadUInt32();
 
                 uint calculatedCrc = Crc32Algorithm.Compute(chunkData);
                 if (fileCrc != calculatedCrc)
                 {
-                    // If the CRC does not match, choose whether to issue a warning or a strict error.
                     Console.WriteLine($"Warning: CRC mismatch for chunk '{chunkType}'. Data may be corrupt.");
-                    // throw new Exception($"CRC mismatch for chunk '{chunkType}'."); 
                 }
-
-                // Parsing Validated Data
                 ParseChunk(data, chunkType, chunkData);
             }
         }
+    
         return data;
     }
 
-    //The main chunk data parser to be newly added
     private static void ParseChunk(PlexData data, string chunkType, byte[] chunkData)
     {
         using (var ms = new MemoryStream(chunkData))
@@ -238,25 +273,13 @@ public static class PlexParser
         {
             switch (chunkType)
             {
+                //META has already been loaded so skip
                 case "META":
-                    data.Dimension = reader.ReadInt32();
-                    reader.ReadInt32(); // Padding
-                    data.VertexCount = reader.ReadUInt64();
-                    data.CreationTime = reader.ReadUInt64();
-                    data.ModifiedTime = reader.ReadUInt64();
-                    data.Precision = (reader.ReadByte() == 1) ? PlexPrecision.Double : PlexPrecision.Single;
-                    reader.ReadBytes(3); // Padding
-                    uint lSoftware = reader.ReadUInt32();
-                    data.SoftwareName = Encoding.UTF8.GetString(reader.ReadBytes((int)lSoftware));
-
-                    // Prepare a saucer
-                    for (ulong i = 0; i < data.VertexCount; i++) 
-                        data.Vertices.Add(new PlexVector(data.Dimension));
                     break;
             
                 case "FACE":
                     ulong facetCount = reader.ReadUInt64();
-                    // Prepare a saucer
+                    // Žó‚¯ŽM‚ð€”õ
                     for (ulong i = 0; i < facetCount; i++) 
                         data.Facets.Add(new PlexFacet(data.Dimension));
                 
@@ -269,8 +292,8 @@ public static class PlexParser
                 case "VERD":
                     bool isDoubleV = chunkType.EndsWith("D");
 
-                    int vertexSizeV = data.Dimension * (isDoubleV ? 8 : 4);
-                    if (vertexSizeV == 0) break; // If the dimension is unknown, do nothing.
+                    int vertexSizeV = data.Dimension * (isDoubleV ? SIZE_DOUBLE : SIZE_FLOAT);
+                    if (vertexSizeV == 0) break; // Dimension‚ª•s–¾‚È‚ç‰½‚à‚µ‚È‚¢
                     int countV = chunkData.Length / vertexSizeV;
                     while (data.Vertices.Count < countV)
                     {
@@ -283,10 +306,10 @@ public static class PlexParser
                     break;
 
                 case "NORM":
-                case "NORMD":
+                case "NRMD":
                     bool isDoubleN = chunkType.EndsWith("D");
 
-                    int facetSizeN = data.Dimension * (isDoubleN ? 8 : 4);
+                    int facetSizeN = data.Dimension * (isDoubleN ? SIZE_DOUBLE : SIZE_FLOAT);
                     if (facetSizeN == 0) break;
                     int countN = chunkData.Length / facetSizeN;
                     while (data.Facets.Count < countN)
@@ -303,10 +326,10 @@ public static class PlexParser
                     break;
             
                 case "CENT":
-                case "CENTD":
+                case "CNTD":
                     bool isDoubleC = chunkType.EndsWith("D");
 
-                    int facetSizeC = data.Dimension * (isDoubleC ? 8 : 4);
+                    int facetSizeC = data.Dimension * (isDoubleC ? SIZE_DOUBLE : SIZE_FLOAT);
                     if (facetSizeC == 0) break;
                 
                     int countC = chunkData.Length / facetSizeC;
