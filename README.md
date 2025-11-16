@@ -1,5 +1,6 @@
 # A Unified Framework for N-Dimensional Visualization and Simulation
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17621258.svg)](https://doi.org/10.5281/zenodo.17621258)
 
 An interactive framework for N-dimensional visualization and geometry manipulation, featuring real-time 4D Boolean operations. This is the official Unity implementation of the concepts presented in the research paper.
 
@@ -159,7 +160,21 @@ Attach this component to the object you want to add collision detection to.
 *   **Object B**: The second 4D mesh to be used in the operation.  
 *   **CELLSIZE**: Spatial division cell size.
 
+## Citation
 
+If you use this software in your research, please cite it as:
+
+```bibtex
+@software{Arai_2025_UnifiedFramework,
+  author       = {Arai, Hirohito},
+  title        = {{A Unified Framework for N-Dimensional Visualization and Simulation}},
+  month        = {11},
+  year         = {2025},
+  publisher    = {Zenodo},
+  version      = {1.0.0},
+  doi          = {10.5281/zenodo.17621258},
+  url          = {https://doi.org/10.5281/zenodo.17621258}
+}
 
 ## License
 This project is licensed under the MIT License.
