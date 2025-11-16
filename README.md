@@ -175,6 +175,7 @@ If you use this software in your research, please cite it as:
   doi          = {10.5281/zenodo.17621258},
   url          = {https://doi.org/10.5281/zenodo.17621258}
 }
+```
 
 ## License
 This project is licensed under the MIT License.
