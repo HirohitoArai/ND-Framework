@@ -12,7 +12,7 @@ public static class PlexParser
     private const int SIZE_UINT = 4;
     private const int SIZE_ULONG = 8;
 
-    #region Write ƒƒ\ƒbƒh (‘‚«‚İ)
+    #region Write
 
     public static void Write(string filePath, PlexData data)
     {
@@ -179,7 +179,7 @@ public static class PlexParser
 
     #endregion
 
-    #region Read (“Ç‚İ‚İ)
+    #region Read
 
     public static PlexData Read(string filePath)
     {
