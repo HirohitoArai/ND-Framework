@@ -872,8 +872,8 @@ public class BooleanManager4D : MonoBehaviour
     {
         UnityEngine.Debug.Log("--- Starting Benchmark Suite ---", this.gameObject);
         RunTestForOperation("UnionBoolean");
-        //RunTestForOperation("IntersectionBoolean");
-        //RunTestForOperation("DifferenceBoolean");
+        RunTestForOperation("IntersectionBoolean");
+        RunTestForOperation("DifferenceBoolean");
 
         UnityEngine.Debug.Log("--- Benchmark Suite Finished ---");
     }
