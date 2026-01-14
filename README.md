@@ -1,11 +1,11 @@
-# A Unified Framework for N-Dimensional Visualization and Simulation
+# A Unified Framework for 3D/4D Visualization and Simulation
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17621258.svg)](https://doi.org/10.5281/zenodo.17621258)
 
-An interactive framework for N-dimensional visualization and geometry manipulation, featuring real-time 4D Boolean operations. This is the official Unity implementation of the concepts presented in the research paper.
+This repository provides a Unity implementation of the software described in the accompanying paper. The current implementation and evaluation in this repository cover 3D and 4D.
 
 ## ✨ Features
-This framework provides a unified, interactive environment for exploring high-dimensional space.
+The current release includes the following components (3D/4D).
 
 <table border="0" align="center">
   <tr>
@@ -26,22 +26,33 @@ This framework provides a unified, interactive environment for exploring high-di
   </tr>
 </table>
 
-*   **N-Dimensional Convex Hull Generation**: Create complex convex shapes from a set of points in 3D and 4D.
+*   **Convex Hull Generation**: Generate convex meshes from point clouds (Quickhull-based implementation).
 *   **Interactive 4D Visualization**: Explore 4D objects by viewing their 3D cross-sections through hyperplane slicing.
-*   **Real-time Boolean Operations**: Perform Union, Intersection, and Difference operations on 3D/4D meshes interactively.
-*   **Extensible Architecture**: Designed with a clear separation of topology and geometry, making it easy to integrate other systems like physics simulations.
+*   **Boolean Operations**: Perform Union, Intersection, and Difference operations on 3D/4D meshes interactively during Play Mode. Latency depends on mesh complexity.
+*   **Topology/geometry separation**: The data model separates connectivity (topology) and embedding (geometry) to support additional systems (e.g., physics simulation).
 
-## System Requirements
-*   **Unity Engine**: 2022.3.6f1 or later
-*   **OS**: Windows 10 or 11 (64-bit)
+## Environment Setup
+- **Unity**: 2022.3.6f1 or later (LTS recommended).
+- **OS tested**: Windows 10/11 (64-bit). Other OS versions are not validated in this repository.
+- **GPU/Driver**: No special requirement beyond Unity’s system requirements.
+
+Setup steps:
+1. Clone this repository (or download the source as a ZIP).
+2. Open **Unity Hub** → **Add** → select the repository folder.
+3. Open the project with **Unity 2022.3.6f1+**.
+4. Open a scene under `Assets/Scenes` and press **Play**.
+
+Notes:
+- Performance and responsiveness depend on mesh size and the selected operation.
+
 
 ## 🔧 Usage
 ### Creating a Convex Hull Mesh
-You can generate a mesh from a point cloud data and save it.
+You can generate a mesh from point cloud data and save it.
 
 <img width="800" alt="CreateConvexHull" src="https://github.com/user-attachments/assets/83dc93ac-5a43-4cf3-a14e-2ad50493924c">
 
-1.  From the top menu bar in the Unity Editor, click **[Tool]** -> **[3DMesh/4DMesh]**.
+1.  From the top menu bar in the Unity Editor, click **[Tool]** → **[3DMesh/4DMesh]**.
 2.  Choose the desired save format:
 *   **Scriptable Object**: A Unity-native format that can be directly attached to a GameObject.
 *   **JSON**: A human-readable format. Allows you to inspect the mesh data structure but cannot be used directly in the scene without conversion.
@@ -61,9 +72,9 @@ You can perform Boolean operations on two meshes in Play Mode.
 <img height="250" alt="ConvertJSON" src="https://github.com/user-attachments/assets/ea5fc84b-0b7e-4c7b-9cb1-a7b567303c9f" />
 <img height="250" alt="Convert" src="https://github.com/user-attachments/assets/10dac4c9-d0e8-48c1-9e4e-21b6bf2cac1a" />
 
-5. JSON will be generated in the assets folder, so right-click and select `Convert to 3D/4D Mesh(ScriptableObject)` to convert it to a scriptable object.
+5. JSON will be generated in the `Assets` folder, so right-click and select `Convert to 3D/4D Mesh(ScriptableObject)` to convert it to a scriptable object.
 
-### Importing & Exporting .plex Files
+### Importing & Exporting `.plex` Files
 #### Export
 1. right-click the mesh-data(ScriptableObject).
 2. click the `Export as plex file`.
@@ -127,7 +138,7 @@ Attach this component to the only one empty object to enable physics.
 
 ### Collider
 **Path:**
-*   **3D:** `Assets/Scripts/3D/physics3D/Collier3D.cs`
+*   **3D:** `Assets/Scripts/3D/physics3D/Collider3D.cs`
 *   **4D:** `Assets/Scripts/4D/physics4D/Collider4D.cs`
 
 **Properties**
@@ -156,8 +167,8 @@ Attach this component to the object you want to add collision detection to.
 *   **4D:** `Assets/Scripts/4D/Boolean4D/BooleanManager4D.cs`
 
 **Properties**
-*   **Object A**: The first 4D mesh to be used in the operation. 
-*   **Object B**: The second 4D mesh to be used in the operation.  
+*   **Object A**: The first mesh to be used in the operation. 
+*   **Object B**: The second mesh to be used in the operation.  
 *   **CELLSIZE**: Spatial division cell size.
 
 ## Citation
@@ -165,15 +176,22 @@ Attach this component to the object you want to add collision detection to.
 If you use this software in your research, please cite it as:
 
 ```bibtex
-@software{Arai_2025_UnifiedFramework,
-  author       = {Arai, Hirohito},
-  title        = {{A Unified Framework for N-Dimensional Visualization and Simulation}},
-  month        = {11},
-  year         = {2025},
+@software{hirohitoarai_2025_17621258,
+  author       = {HirohitoArai},
+  title        = {HirohitoArai/ND-Framework: 1.0.0},
+  month        = nov,
+  year         = 2025,
   publisher    = {Zenodo},
   version      = {1.0.0},
   doi          = {10.5281/zenodo.17621258},
-  url          = {https://doi.org/10.5281/zenodo.17621258}
+  url          = {https://doi.org/10.5281/zenodo.17621258},
+  swhid        = {swh:1:dir:22b8e0707fee618f119a3205834f05293b52dbdc
+                   ;origin=https://doi.org/10.5281/zenodo.17621257;vi
+                   sit=swh:1:snp:9ab61b16f5140fb5687167eaa274059c9bcd
+                   1839;anchor=swh:1:rel:8fbcbb700b7ad25ee49932641a68
+                   a6ee5055f75f;path=HirohitoArai-ND-
+                   Framework-57440e6
+                  },
 }
 ```
 
