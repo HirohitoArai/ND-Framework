@@ -176,22 +176,15 @@ Attach this component to the object you want to add collision detection to.
 If you use this software in your research, please cite it as:
 
 ```bibtex
-@software{hirohitoarai_2025_17621258,
-  author       = {HirohitoArai},
-  title        = {HirohitoArai/ND-Framework: 1.0.0},
-  month        = nov,
-  year         = 2025,
+@software{hirohito_arai_2026_18247896,
+  author       = {Hirohito Arai},
+  title        = {HirohitoArai/unified-3d-4d-framework: 1.0.1},
+  month        = jan,
+  year         = 2026,
   publisher    = {Zenodo},
-  version      = {1.0.0},
-  doi          = {10.5281/zenodo.17621258},
-  url          = {https://doi.org/10.5281/zenodo.17621258},
-  swhid        = {swh:1:dir:22b8e0707fee618f119a3205834f05293b52dbdc
-                   ;origin=https://doi.org/10.5281/zenodo.17621257;vi
-                   sit=swh:1:snp:9ab61b16f5140fb5687167eaa274059c9bcd
-                   1839;anchor=swh:1:rel:8fbcbb700b7ad25ee49932641a68
-                   a6ee5055f75f;path=HirohitoArai-ND-
-                   Framework-57440e6
-                  },
+  version      = {1.0.1},
+  doi          = {10.5281/zenodo.18247896},
+  url          = {https://doi.org/10.5281/zenodo.18247896},
 }
 ```
 
